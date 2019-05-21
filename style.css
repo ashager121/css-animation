@@ -1,0 +1,89 @@
+.box1, .box2, .box3, .box4 {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.box1:hover, .box2:hover, .box3:hover, .box4:hover {
+    border: solid 2px white;
+    transition: border .15s ease-in-out;
+}
+.box1 {
+    background-color: lightcoral;
+    animation-name: lcoralbox;
+    top: 0;
+    left: 0px;
+}
+.box2 {
+    background-color: lightblue;
+    animation-name: lbluebox;
+    top: 0;
+    right: 0;
+}
+.box3 {
+    background-color: lightgreen;
+    animation-name: lgreenbox;
+    bottom: 0;
+    left: 0;
+}
+.box4 {
+    background-color: lightgoldenrodyellow;
+    animation-name: lgyellowbox;
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes lcoralbox{
+    0% {
+        top: 0;
+        left:0;
+    }
+    100% {
+        top: 50%;
+        left: 50%;
+        border-radius: 0 0 100% 0;
+        background-color: black;
+    }
+}
+@keyframes lbluebox {
+     0% {
+        top: 0;
+        right:0;
+    }
+    100% {
+        top: 50%;
+        right: 50%;
+        border-radius: 0 0 0 100%;
+        background-color: black;
+    }
+  } 
+
+  @keyframes lgreenbox {
+  0% {
+        bottom: 0;
+        left: 0;
+    }
+    100% {
+        bottom: 50%;
+        left: 50%;
+        border-radius: 0 100% 0 0;
+        background-color: black;
+    }
+  }
+  @keyframes lgyellowbox {
+     0% {
+        bottom: 0;
+        right:0;
+        background-color: black;
+    }
+    100% {
+        bottom: 50%;
+        right: 50%;
+        border-radius: 100% 0 0 0;
+        background-color: black;
+    }
+  }
